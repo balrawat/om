@@ -1491,3 +1491,47 @@ Media queries
 		height: 250px !important;
 	}
 }
+
+/* ==========================
+   FIX: Parallax sections not visible on GitHub Pages
+   ========================== */
+
+#parallax1,
+#parallax2,
+#testimonials {
+  display: block;
+  min-height: 400px;          /* ensures section is visible */
+  width: 100%;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional: make hero full screen */
+#parallax1 {
+  min-height: 100vh;
+}
+
+/* Ensure content inside is visible */
+#parallax1 .container,
+#parallax2 .container,
+#testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add overlay for readability (optional but recommended) */
+#parallax1::before,
+#parallax2::before,
+#testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
