@@ -528,6 +528,15 @@ section.featured {
 	color: #fdfdfd;
 }
 
+section.featured .featured-hero-banner {
+	display: block;
+	max-width: min(960px, 100%);
+	height: auto;
+	margin: 0 auto 24px auto;
+	border-radius: 8px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
 section.featured h2.slogan {
 	color: #fff;
 	font-size: 32px;
@@ -1316,10 +1325,14 @@ Media queries
 		margin-bottom: 20px;
 	}
 	
-	section.featured img {
+	section.featured img:not(.featured-hero-banner) {
 		max-width: 120px;
 		width: 100%;
 		height: auto;
+	}
+
+	section.featured .featured-hero-banner {
+		max-width: min(960px, 100%);
 	}
 	
 	section.section {
