@@ -1535,3 +1535,18 @@ Media queries
   background: rgba(0, 0, 0, 0.4); /* dark overlay */
   z-index: 1;
 }
+
+/* FORCE FIX */
+#parallax1,
+#parallax2,
+#testimonials {
+  min-height: 500px !important;
+  height: 500px !important;
+  display: block !important;
+  position: relative !important;
+}
+
+/* Debug: make it obvious */
+#parallax1 {
+  border: 5px solid red !important;
+}
